@@ -5,18 +5,22 @@ import App from './App';
 import { Route, Routes, BrowserRouter } from 'react-router-dom'
 
 import SignUp from './SignUp'
+import Home from './Home'
+import Owner from './Owner'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />} />
+        <Route path='Owner' element={<Owner />} />
+        <Route path="home" element={<Home />} />
+        <Route path="/LogIn" element={<App />} />
         <Route path="SignUp" element={<SignUp />} />
-        {/* <Route path="invoices" element={<Invoices />} /> */}
+
 
       </Routes>
-    </BrowserRouter>,
+    </BrowserRouter>
   </React.StrictMode>
 );
 
